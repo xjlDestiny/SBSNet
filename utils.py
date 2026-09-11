@@ -1070,7 +1070,7 @@ def ablationExperimentalResultsContrast(hsi: np.ndarray, gt: np.ndarray, detecti
     #              label='%s (AUC = %s)' % (model_name, auc_ft_list[i]))
     for i, model_name in enumerate(model_names):
         plt.plot(fpr_list[i], tpr_list[i], color=colors[i], label='%s' % model_name, linewidth=3)
-        # if model_name != 'BTSNet':
+        # if model_name != 'SBSNet':
         #     plt.plot(fpr_list[i], tpr_list[i], color=colors[i], label='w/o %s' % model_name, linewidth=3)
         # else:
         #     plt.plot(fpr_list[i], tpr_list[i], color=colors[i], label='%s' % model_name, linewidth=3)
@@ -1095,7 +1095,7 @@ def ablationExperimentalResultsContrast(hsi: np.ndarray, gt: np.ndarray, detecti
     for i, model_name in enumerate(model_names):
         plt.plot(thresholds_list[i], fpr_list[i], color=colors[i],
                  label='%s' % model_name, linewidth=3)
-        # if model_name != 'BTSNet':
+        # if model_name != 'SBSNet':
         #     plt.plot(thresholds_list[i], fpr_list[i], color=colors[i],
         #              label='w/o %s' % model_name, linewidth=3)
         # else:
@@ -1125,7 +1125,7 @@ def ablationExperimentalResultsContrast(hsi: np.ndarray, gt: np.ndarray, detecti
     for i, model_name in enumerate(model_names):
         plt.plot(thresholds_list[i], tpr_list[i], color=colors[i],
                  label='%s' % model_name, linewidth=3)
-        # if model_name != 'BTSNet':
+        # if model_name != 'SBSNet':
         #     plt.plot(thresholds_list[i], tpr_list[i], color=colors[i],
         #              label='w/o %s' % model_name, linewidth=3)
         # else:
@@ -1155,7 +1155,7 @@ def ablationExperimentalResultsContrast(hsi: np.ndarray, gt: np.ndarray, detecti
     for i, model_name in enumerate(model_names):
         ax_3D_plot.plot3D(thresholds_list[i], fpr_list[i], tpr_list[i],
                           color=colors[i], label='%s' % model_name)
-        # if model_name != 'BTSNet':
+        # if model_name != 'SBSNet':
         #     # 在 plot3D 函数中添加 color 参数来设置颜色
         #     ax_3D_plot.plot3D(thresholds_list[i], fpr_list[i], tpr_list[i],
         #                       color=colors[i], label='w/o %s' % model_name)
@@ -1185,10 +1185,10 @@ def ablationExperimentalResultsContrast(hsi: np.ndarray, gt: np.ndarray, detecti
     x_labels = []
     for model_name in model_names:
         x_labels.append(model_name)
-        # if model_name != 'BTSNet':
+        # if model_name != 'SBSNet':
         #     x_labels.append('w/o ' + model_name)
         # else:
-        #     x_labels.append('BTSNet')
+        #     x_labels.append('SBSNet')
     legend_labels = ['BackGround', 'Target']
     color_list = ['#FF00CC', '#0c35eb']
     group_data_number = len(legend_labels)

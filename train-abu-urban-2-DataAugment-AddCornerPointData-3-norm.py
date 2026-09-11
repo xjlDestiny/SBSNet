@@ -19,13 +19,13 @@ print(device)
 """ 数据加载 """
 HSI_GT_PATH = "dataset/Abu-urban/abu-urban-2-gt.npy"
 HSI_DATA_PATH = "dataset/Abu-urban/abu-urban-2.npy"
+window_size = 3
 HSI_DATA_NAME = os.path.splitext(os.path.basename(HSI_DATA_PATH))[0]
 hsi_origin = np.load(HSI_DATA_PATH)
 gt = np.load(HSI_GT_PATH)
 print(gt.sum())
 hsi_origin = maxMinNormalization(hsi_origin)
 ts = tsGeneration(hsi_origin, gt, type_target_spectrum)
-window_size = 3
 hsi_w = cornerPointCalculation(hsi_origin, window_size=window_size, metric='SA')
 
 # hsi_list = [hsi_origin.reshape(-1, hsi_origin.shape[-1]), hsi_w3.reshape(-1, hsi_w3.shape[-1])]

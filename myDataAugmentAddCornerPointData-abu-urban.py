@@ -15,18 +15,17 @@ if __name__ == "__main__":
     """ 数据加载 """
     # HSI_GT_PATH = "dataset/Abu-airport/Abu-airport-2-gt.npy"
     # HSI_DATA_PATH = "dataset/Abu-airport/Abu-airport-2.npy"
+    # window_size = 5
     # HSI_GT_PATH = "dataset/Abu-beach/abu-beach-2-gt.npy"
     # HSI_DATA_PATH = "dataset/Abu-beach/abu-beach-2.npy"
+    # window_size = 3
     HSI_GT_PATH = "dataset/Abu-urban/abu-urban-2-gt.npy"
     HSI_DATA_PATH = "dataset/Abu-urban/abu-urban-2.npy"
+    window_size = 3
     # HSI_GT_PATH = "dataset/AVIRIS/AVIRIS-I-gt.npy"
     # HSI_DATA_PATH = "dataset/AVIRIS/AVIRIS-I.npy"
-    # HSI_GT_PATH = "dataset/AVIRIS/AVIRIS-II-gt.npy"
-    # HSI_DATA_PATH = "dataset/AVIRIS/AVIRIS-II.npy"
-    # HSI_GT_PATH = "dataset/Sandiego-gt.npy"
-    # HSI_DATA_PATH = "dataset/Sandiego.npy"
+    # window_size = 5
     type_target_spectrum = 2
-    window_size = 7
     hsi_origin = np.load(HSI_DATA_PATH)
     gt = np.load(HSI_GT_PATH)
     hsi_origin = maxMinNormalization(hsi_origin)

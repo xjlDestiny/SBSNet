@@ -3,6 +3,8 @@
 import random
 
 seeds = [23]
+# Used when constructing the per-run log directory in the training entrypoint.
+master_seed = 23
 
 NUM_CLUSTERS = 10
 NUM_PER_CLUSTER = 64
